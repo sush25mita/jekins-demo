@@ -8,13 +8,13 @@ pipeline{
 		stage('print'){
 			steps{
 				echo 'Hello'
-				sh 'mvn --version'
+				bat 'mvn --version'
 			}
 		}
 		
 		stage('Package Stage'){
 			steps{
-					sh 'mvn clean package'
+					bat 'mvn clean package'
 			}
 		}
 	}
