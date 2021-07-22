@@ -1,0 +1,17 @@
+pipeline{
+	agent any
+	stages{
+	
+		stage('print'){
+			steps{
+				echo 'Hello'
+			}
+		}
+		
+		stage('Compile Stage'){
+			steps{
+				sh 'mvn compile'
+			}
+		}
+	}
+}
