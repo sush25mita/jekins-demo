@@ -1,5 +1,8 @@
 pipeline{
 	agent any
+	tools {
+        	maven 'Maven_3.6.3' 
+    	}
 	stages{
 	
 		stage('print'){
@@ -10,9 +13,7 @@ pipeline{
 		
 		stage('Compile Stage'){
 			steps{
-				maven(maven : 'Maven_3.6.3'){
-					sh 'mvn clean compile'
-				}
+					sh 'mvn compile'
 			}
 		}
 	}
