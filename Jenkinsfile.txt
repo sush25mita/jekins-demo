@@ -1,0 +1,19 @@
+pipeline{
+	agent any
+	stages{
+	
+		stage('print'){
+			steps{
+				echo 'Hello'
+			}
+		}
+		
+		stage('Compile Stage'){
+			steps{
+				withMaven(maven : 'maven'){
+					sh 'mvn compile'
+				}
+			}
+		}
+	}
+}
