@@ -10,8 +10,8 @@ pipeline{
 		
 		stage('Compile Stage'){
 			steps{
-				maven(maven : 'maven'){
-					sh 'mvn compile'
+				maven(maven : 'Maven_3.6.3'){
+					sh 'mvn clean compile'
 				}
 			}
 		}
